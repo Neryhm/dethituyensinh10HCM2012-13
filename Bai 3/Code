@@ -1,0 +1,34 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+bool stringAscending(string s){
+	bool ans=false;
+	for(int i=0;i<s.length()-1;++i){
+		if(s[i]>s[i+1]) ans=true;
+	}
+	return ans;
+}
+string BaseConverter(int n,int base){
+	if(n==0) return "";
+	else
+	return BaseConverter(n/base,base)+to_string(n%base);
+}
+
+int main(){
+	int input;
+	cin>>input;
+	string s=BaseConverter(input,8);
+	int i=0,temp;
+	while(stringAscending(s)&&i<5){
+		temp=stoi(s,0,8);
+		sort(s.begin(),s.end());
+		temp-=stoi(s,0,8);
+		s=BaseConverter(temp,8);
+		++i;
+	}
+	int ans=stoi(s,0,8);
+	cout<<ans;
+	return 0;
+}
