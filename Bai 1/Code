@@ -1,1 +1,29 @@
+#include<iostream>
+#include<utility>
+using namespace std;
 
+int main(){
+  int n,m;
+  cin>>n>>m;
+  int p[m];
+  for(auto& it:p)
+    cin>>it;
+  pair<int,int>ans=make_pair(m,0);
+  for(int i=0;i<m;++i){
+    int total=p[i];
+    int count=1;
+    for(int j=0;j<m;++j){
+      if(j==i) continue;
+      if(p[j]>=p[i]){
+        total+=p[i];
+        count++;
+      }
+    }
+    if(total>ans.second||(total==ans.second&&count<ans.first)){
+      ans.first=count;
+      ans.second=total;
+    }
+  }
+  cout<<ans.second/ans.first<<" "<<ans.second;
+  return 0;
+}
