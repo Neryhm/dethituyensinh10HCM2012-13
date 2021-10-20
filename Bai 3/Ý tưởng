@@ -1,0 +1,6 @@
+Viết 1 hàm đổi cơ số 10 sang 8;
+Đổi input sang cơ số 8;
+Kiếm tra các chữ số đã được xếp theo thứ tự tăng dần chưa, nếu rồi thì kết thúc vòng lặp. ( Ở đây t viết 1 hàm điều kiện riêng)
+  Điều kiện thứ 2 là thực hiền phép trừ tối đa 4 lần sau lần đầu, vậy là 5.
+T không biết trừ ở hệ cơ số 8 nên t quy về cơ số 10 để trừ, rồi lại chuyển về cơ số 8 để kiểm tra diều kiện.
+Kết quả được in ở hệ cơ số 10
